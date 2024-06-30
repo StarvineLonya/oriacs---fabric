@@ -1,0 +1,123 @@
+{
+  "loading_priority": 100,
+  "replace": true,
+  "type": "origins:multiple",
+  "diving": {
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "oriacs:diving_helmet"
+            }
+          }
+        },
+        {
+          "inverted": true,
+          "type": "origins:power",
+          "power": "origins:water_breathing"
+        },
+        {
+          "type": "origins:submerged_in",
+          "fluid": "minecraft:water"
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:water_breathing",
+        "duration": 40,
+        "is_ambient": false,
+        "show_particles": false,
+        "show_icon": true
+      }
+    }
+  },
+
+  "damage": {
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "condition":{
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "oriacs:diving_helmet"
+            }
+          }
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:durability",
+            "compare_to": 1,
+            "comparison": ">"
+          }
+        },
+        {
+          "type": "origins:submerged_in",
+          "fluid": "minecraft:water"
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:equipped_item_action",
+      "equipment_slot": "head",
+      "action": {
+        "type": "origins:damage",
+        "amount": 1
+      }
+    }
+  },
+  "diving": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "condition":{
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "oriacs:diving_helmet"
+            }
+          }
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:durability",
+            "compare_to": 1,
+            "comparison": "=="
+          }
+        },
+        {
+          "type": "origins:submerged_in",
+          "fluid": "minecraft:water"
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:replace_inventory",
+      "slot": "armor.head",
+      "stack": {
+        "item": "oriacs:landwalking_helmet"
+      }
+    }
+  }
+}
