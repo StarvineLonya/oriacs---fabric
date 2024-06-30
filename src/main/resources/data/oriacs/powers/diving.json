@@ -1,6 +1,5 @@
 {
   "loading_priority": 100,
-  "replace": true,
   "type": "origins:multiple",
   "diving": {
     "type": "origins:action_over_time",

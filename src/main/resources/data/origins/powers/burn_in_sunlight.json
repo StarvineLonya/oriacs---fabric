@@ -1,0 +1,29 @@
+{
+  "loading_priority": 100,
+  "replace": true,
+  "type": "origins:burn",
+  "interval": 20,
+  "burn_duration": 6,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:exposed_to_sun"
+      },
+      {
+        "type": "origins:invisible",
+        "inverted": true
+      },
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "offhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "oriacs:umbrella"
+          }
+        }
+      }
+    ]
+  }
+}
