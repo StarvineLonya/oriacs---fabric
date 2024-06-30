@@ -43,7 +43,7 @@
 
   "damage": {
     "type": "origins:action_over_time",
-    "interval": 20,
+    "interval": 40,
     "condition":{
       "type": "origins:and",
       "conditions": [
@@ -81,7 +81,7 @@
       }
     }
   },
-  "diving": {
+  "landwalking": {
     "type": "origins:action_over_time",
     "interval": 1,
     "condition":{
