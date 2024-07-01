@@ -42,7 +42,7 @@
 
   "damage": {
     "type": "origins:action_over_time",
-    "interval": 40,
+    "interval": 100,
     "condition":{
       "type": "origins:and",
       "conditions": [
