@@ -124,5 +124,40 @@
         "item": "oriacs:diving_helmet"
       }
     }
+  },
+  "scoop": {
+    "type": "origins:active_self",
+    "key": "key.use",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "oriacs:diving_helmet"
+            }
+          }
+        },
+        {
+          "type": "origins:raycast",
+          "distance": 5,
+          "block": true,
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:water"
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:replace_inventory",
+      "slot": "weapon.mainhand",
+      "stack": {
+        "item": "oriacs:landwalking_helmet"
+      }
+    }
   }
 }
