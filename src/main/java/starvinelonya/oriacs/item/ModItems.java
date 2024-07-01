@@ -19,7 +19,7 @@ public class ModItems {
     public static final Item DIVING_HELMET = registerItem("diving_helmet",
             new ArmorItem(ModArmorMaterials.DIVING, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item LANDWALKING_HELMET = registerItem("landwalking_helmet",
-            new ArmorItem(ModArmorMaterials.CHAINMEMBRANE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            new ArmorItem(ModArmorMaterials.LANDWALKING, ArmorItem.Type.HELMET, new FabricItemSettings()));
 
     public static final Item CHAINMEMBRANE_HELMET = registerItem("chainmembrane_helmet",
             new ArmorItem(ModArmorMaterials.CHAINMEMBRANE, ArmorItem.Type.HELMET, new FabricItemSettings()));
