@@ -44,6 +44,7 @@
     }
   },
 
+
   "damage": {
     "type": "origins:action_over_time",
     "interval": 100,
@@ -125,15 +126,22 @@
       }
     }
   },
-  "scoop": {
-    "type": "origins:active_self",
-    "key": "key.use",
+
+
+  "rewater": {
+    "type": "origins:action_on_item_use",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "minecraft:potion"
+      }
+    },
     "condition": {
-      "type": "origins:and",
+      "type": "origins:or",
       "conditions": [
         {
           "type": "origins:equipped_item",
-          "equipment_slot": "mainhand",
+          "equipment_slot": "head",
           "item_condition": {
             "type": "origins:ingredient",
             "ingredient": {
@@ -142,21 +150,22 @@
           }
         },
         {
-          "type": "origins:raycast",
-          "distance": 5,
-          "block": true,
-          "block_condition": {
-            "type": "origins:in_tag",
-            "tag": "minecraft:water"
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "oriacs:landwalking_helmet"
+            }
           }
         }
       ]
     },
     "entity_action": {
       "type": "origins:replace_inventory",
-      "slot": "weapon.mainhand",
+      "slot": "armor.head",
       "stack": {
-        "item": "oriacs:landwalking_helmet"
+        "item": "oriacs:diving_helmet"
       }
     }
   }

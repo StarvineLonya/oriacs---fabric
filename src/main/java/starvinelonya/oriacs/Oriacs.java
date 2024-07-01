@@ -1,6 +1,7 @@
 package starvinelonya.oriacs;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import starvinelonya.oriacs.item.ModItems;
@@ -12,5 +13,6 @@ public class Oriacs implements ModInitializer {
 	@Override
 	public void onInitialize(){
 		ModItems.registerModItems();
+
 	}
 }
