@@ -165,7 +165,7 @@
       "type": "origins:replace_inventory",
       "slot": "armor.head",
       "stack": {
-        "item": "oriacs:diving_helmet"
+        "item": "oriacs:landwalking_helmet"
       }
     }
   }
